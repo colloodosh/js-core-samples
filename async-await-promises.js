@@ -4,9 +4,11 @@ const fetchProducts = async () => {
     return await fetch('https://fakestoreapi.com/products/1')
 };
 
-fetchProducts().then((res) => res.json()).then((data) => {
-    console.log(data)
-});
+fetchProducts()
+    .then((res) => res.json())
+    .then((data) => {
+        console.log(data)
+    });
 
 const respondAfterXSeconds = new Promise((resolve) => {
     let x = 0;
